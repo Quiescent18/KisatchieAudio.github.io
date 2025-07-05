@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Antarctic Music Studios</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="font-awesome.min.css"/>
+  <link rel ="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  
+  <style>
+ 
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="img/intro/logo.webp"></img></div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="navbar">
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#reviews">Reviews</a>
+	  <a href="#studio-gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="#equipment">Gear</a>
+    </nav>
+  </header>
+
+  <section id="about" class="intro">
+   
+    <div class="carousel"></div>
+
+    
+    <div class="content">
+		<h1>
+        <p style="font-style: italic; margin-bottom: 1rem;">Specializing in killer sax and keyboard tracks that elevate your sound.</p>
+      </h1>
+		<br>
+        <h1>About the Studio</h1>
+      <p>
+        Hi, I’m Alex McVittie, owner and operator of Antarctic Studios. I’ve been playing keys for over <span id="years-keys"></span>, sax for over <span id="years-sax"></span>, and I’ve been in more bands than I can count—everything from ska to prog rock. While I'm still in a few prog bands and have a solo synthwave project, I love helping artists take their tracks to the next level with recording, mixing, mastering, and session work.
+      </p>
+      <br>
+      <p>
+        I specialize in adding keys and sax to rock and electronic tracks, especially the synthwave-inspired stuff—but honestly, I love working across genres. If it grooves, I’m in.
+      </p>
+      <br>
+      <p>
+        The studio, located in Cambridge, Ontario, Canada, is fully equipped for live drum tracking and real amp recording, and I’m always up for collaborating with people who care about getting the feel just right. If you’re looking for someone who can bring a musical ear and a bit of personality to your project, let’s talk.
+      </p>
+      <br>
+      <p>
+        Keep scrolling to hear some samples of my work, check out some client testimonials, and get in touch with my contact form if you're interested in working together. 
+      </p>
+    </div>
+
+     <img src="img/intro/headshot.webp" alt="Alexander McVittie" />
+    
+  </section>
+
+  <section id="portfolio">
+    <h1>My Music Portfolio</h1>
+    <h2>Filter by Credit</h2>
+    <div class="filter-buttons" id="filter-buttons"></div>
+
+    <h2>Filter by Genre</h2>
+    <div class="filter-buttons" id="genre-buttons"></div>
+
+	<div class="filter-buttons" id="clear-filters-wrapper" style="text-align: center; margin-top: 1rem; display: none;">
+		<button id="clear-filters">
+		  Clear Filters
+		</button>
+	  </div>
+
+    <h3>Click or tap on any of the tracks below to listen!</h3>
+
+    <div class="track-nav-wrapper">
+		<button class="scroll-btn left" onclick="scrollTracks(-1)">←</button>
+
+		<div id="track-list" class="track-grid"></div>
+
+		<button class="scroll-btn right" onclick="scrollTracks(1)">→</button>
+	</div>
+
+    <audio id="player" controls style="width: 100%; margin-top: 30px;" controlsList="nodownload"></audio>
+  </section>
+
+  <section id="reviews">
+    <!-- Your reviews & testimonials code here -->
+     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+			<div class="elfsight-app-c944c570-0782-463b-af03-2f21bff17cac"></div>
+  </section>
+
+  <section id="studio-gallery">
+  <h2 style="text-align: center; margin-bottom: 1rem;">Studio Gallery</h2>
+  <div class="gallery-carousel" id="gallery-container"></div>
+
+	<div id="lightbox" class="gallery-lightbox">
+	<button id="lightbox-close" class="lightbox-close">&times;</button>
+	<button id="lightbox-prev" class="lightbox-nav prev">&#10094;</button>
+	<img id="lightbox-img" src="" alt="" />
+	<button id="lightbox-next" class="lightbox-nav next">&#10095;</button>
+	<p id="lightbox-caption"></p>
+	</div>
+</section>
+
+  <section id="contact">
+    <!-- Your contact form code here -->
+     <div class="section-title">
+				<h2>Get in Touch</h2>	
+                <p>Every project is unique. Pricing is available upon request, and we’re happy to work with most budgets to make your vision happen.</p>
+				
+			</div>
+			<form class="contact-form" action="https://formspree.io/f/maylelbk" method="POST">
+				<div class="row">
+					<div class="col-lg-4">
+						<input type="text" placeholder="Your Name" name="name" required>
+					</div>
+					<div class="col-lg-4">
+						<input type="text" placeholder="Your E-mail" name="_replyto" required>
+					</div>
+					<div class="col-lg-4">
+						<input type="text" placeholder="Subject" name="subject" required>
+					</div>
+					<div class="col-lg-12">
+						<input type="text" placeholder="Message" name="msg" required>
+						<div class="text-center">
+							<button class="site-btn" value="Send">SEND IT!</button>
+						</div>
+					</div>	
+				</div>
+			</form>
+            <div class="ft-contact-widget">
+            <p><a href="https://instagram.com/antarcticstudios"><i class="fa-brands fa-instagram"> </i> @antarcticstudios</a></p>
+							<p><a href="https://facebook.com/antarcticstudios"><i class="fa-brands fa-facebook"></i> @antarcticstudios </a></p>
+							<p><a href="mailto:alex@antarcticstudios.ca"><i class="fa fa-envelope"></i> alex@antarcticstudios.ca</a></p>
+							<p><a href="tel:+1226-279-2261"><i class="fa fa-phone"></i> (226) 279 2261</a></p>
+							<br>
+							<p><a href="https://credits.muso.ai/profile/aaebb6e7-05ed-4003-8c4b-5f5a7020d2d0">More credits</a></a></p>
+            </div>
+  </section>
+
+
+  <section id="equipment">
+    <!-- Your equipment list code here -->
+     <div class="text-center">
+		<h2>Studio Inventory</h2>
+		<br>
+		
+	</div>
+    <br>
+
+	<div class="container">
+		<!-- Start Accordion -->
+		<div class="accordion">
+
+			<!-- Microphones -->
+			<div class="accordion-item active">
+				<button class="accordion-button" disabled>Microphones</i></button>
+				<div class="accordion-content">
+					<h4>Condensers</h4>
+					<div class="gear-grid">
+						<li>Apex 565 clip-on microphone</li>
+						<li>Audio Technica AT4033a</li>
+						<li>Dachman Audio DA47FET</li>
+						<li>Dachman Audio DA87SE</li>
+						<li>MXL V69 Mogami</li>
+						<li>Sonarworks Omni Mic</li>
+						<li>Warm Audio WA-251</li>
+						<li>Warm Audio WA-47jr</li>
+						<li>Warm Audio WA-84 (x2, matched pair)</li>
+					</div>
+                    <br>
+
+					<h4>Dynamics</h4>
+					<div class="gear-grid">
+						<li>AKG D112</li>
+						<li>ElectroVoice N/D 257A</li>
+						<li>ElectroVoice RE20</li>
+						<li>ElectroVoice RE320</li>
+						<li>Shure SM57 (x3) & SM58</li>
+						<li>Shure SM7b</li>
+					</div>
+                    <br>
+
+					<h4>Ribbon</h4>
+					<div class="gear-grid">
+						<li>MXL R144 (x2)</li>
+					</div>
+                    <br>
+
+					<h4>Specialty</h4>
+					<div class="gear-grid">
+						<li>Custom lofi handset phone microphone</li>
+					</div>
+				</div>
+			</div>
+
+			<!-- Instruments & Synths -->
+			<div class="accordion-item active">
+				<button class="accordion-button" disabled>Instruments & Synths</button>
+				<div class="accordion-content">
+					<h4>Keyboards & Hardware Synths</h4>
+					<div class="gear-grid">
+						<li>ASM Hydrasynth</li>
+						<li>Behringer Model15 semi modular synth</li>
+						<li>Expressive E Osmose</li>
+						<li>Roland AX Edge keytar</li>
+						<li>Roland Fantom 07 76 key synth</li>
+						<li>Roland RD-2000 88 weighted key</li>
+					</div>
+					<br>
+					<h4>Drums</h4>
+					<div class="gear-grid">
+						<li>Pearl Export Poplar/Asian Mahogany shells (22" kick, 10/12/16 toms, matched 14 snare)</li>
+						<li>Zildjian A Custom cymbals (20" medium ride, 17" fast crash, 14" hihat)</li>
+						<li>Sabian hand-hammered 5" splash/china</li>
+					</div>
+					<br>
+					<h4>Guitars & Ukuleles</h4>
+					<div class="gear-grid">
+						<li>Epiphone Les Paul Studio electric guitar</li>
+						<li>Jackson JS22-7 electric guitar</li>
+						<li>Alvarez acoustic guitar</li>
+						<li>Parlour-sized nylon string guitar</li>
+						<li>Epiphone Les Paul concert scale ukulele </li>
+						<li>Kala tenor scale ukulele</li>
+					</div>
+                    <br>
+					<h4>Other Instruments</h4>
+					<div class="gear-grid">
+						<li>Casio DG-10 digital guitar synthesizer</li>
+						<li>Golem Poseidon 4 Theremin</li>
+						<li>Kalimba thumb piano</li>
+					</div>
+				</div>
+			</div>
+
+			<!-- Guitar/Bass Gear -->
+			<div class="accordion-item active">
+				<button class="accordion-button" disabled>Guitar & Bass Gear</button>
+				<div class="accordion-content">
+					<h4>Amplifiers & Cabinets</h4>
+					<div class="gear-grid">
+						<li>Hughes & Kettner Spirit of Rock 50W head</li>
+						<li>Marshall Origin 20W head</li>
+						<li>Orange Micro Dark 25W head</li>
+						<li>Peavey 6505+ 60W head</li>
+						<li>Line 6 Spider Valve 112 combo guitar amp</li>
+						<li>Peavey MAX 115 300W combo bass amp</li>
+						<li>Orange PPC212 guitar cabinet (Jim Root signature)</li>
+						<li>Suhr 100W Reactive Loadbox</li>
+					</div>
+                    <br>
+					<h4>Pedals & FX</h4>
+					<div class="gear-grid">
+						<li>Boss HM2 & MT2 overdrive pedals</li>
+						<li>Boss RC-20 Loop Pedal</li>
+						<li>Electro-Harmonix Big Muff fuzz pedal (Soviet era)</li>
+						<li>Fender Hello Kitty Fuzz</li>
+						<li>Joyo Tauren (Klon clone)</li>
+					</div>
+                    <br>
+					<h4>Accessories</h4>
+					<div class="gear-grid">
+						<li>Radial ProRMP Reamp box</li>
+						<li>RNDI Active DI</li>
+						<li>ART PD2 Passive DI (x3)</li>
+						<li>ART BT-DI Bluetooth DI box</li>
+					</div>
+				</div>
+			</div>
+
+			<!-- Studio Hardware -->
+			<div class="accordion-item active">
+				<button class="accordion-button" disabled>Studio Hardware</button>
+				<div class="accordion-content">
+					<h4>Audio Interface & Converters</h4>
+					<div class="gear-grid">
+						<li>RME UFXIII 188ch audio interface</li>
+						<li>Behringer ADA8200 (x2, modded)</li>
+					</div>
+                    <br>
+					<h4>Monitoring</h4>
+					<div class="gear-grid">
+						<li>Yorkville YSM6 2-way monitors <i>with SonarWorks</i></li>
+						<li>Technics 3-way HiFi speakers</li>
+						<li>Harman/Kardon HK3300 amplifier</li>
+						<li>Audio-Technica ATH-M50x headphones (x2)</li>
+						<li>Bose QC25 headphones</li>
+						<li>Sennheiser HD518 headphones</li>
+					</div>
+                    <br>
+					<h4>Preamps</h4>
+					<div class="gear-grid">
+						<li>Cranborne Camden (x2)</li>
+						<li>DIYRE CP5</li>
+						<li>LA Audio MLX20 dual preamp</li>
+						<li>N-SONIC N73 (Neve style)</li>
+					</div>
+                    <br>
+					<h4>Compressors & FX Units</h4>
+					<div class="gear-grid">
+						<li>ART Pro VLA II</li>
+						<li>AudioScape SSL Bus Compressor</li>
+						<li>Shure M267 mixer/limiter</li>
+						<li>Sony DPS-V55 stereo FX unit</li>
+						<li>SPL BiG stereo widener</li>
+					</div>
+                    <br>
+					<h4>MIDI controllers</h4>
+					<div class="gear-grid">
+						<li>Arturia Keystep 25</li>
+						<li>Maschine MK1 pad controller</li>
+						<li>PreSonus Faderport 16</li>
+					</div>
+				</div>
+			</div>
+
+			
+
+			
+
+			<!-- Software -->
+			<div class="accordion-item active">
+				<button class="accordion-button" disabled>Software</button>
+				<div class="accordion-content">
+					<h4>DAWs</h4>
+					<div class="gear-grid">
+						<li>Cubase 14 Pro</li>
+						<li>Harrison MixBus Pro</li>
+						<li>PreSonus Studio One Artist 6</li>
+						<li>Reaper</li>
+					</div>
+                    <br>
+					<h4>Mixing/Mastering Plugins</h4>
+					<div class="gear-grid">
+						<li>FabFilter suite (Q3&4, C2, L2, MB, R, Saturn, Timeless)</li>
+						<li>Izotope (Ozone, Nectar, Neutron, RX)</li>
+						<li>Black Salt Audio Silencer</li>
+						<li>Oeksound (Soothe2, Spiff)</li>
+						<li>SSL Native Bus Compressor & Channel Strip</li>
+						<li>SubMission Audio (Flatline 2, PreFire)</li>
+						<li>URM (ChannelMate, LimiTilt, MiniClip, TrimPan)</li>
+						<li>SonarWorks SoundID</li>
+					</div>
+                    <br>
+					<h4>Soft Synths & Instruments</h4>
+					<div class="gear-grid">
+						<li>Absynth 5</li>
+						<li>Battery</li>
+						<li>Equator2</li>
+						<li>FM8</li>
+						<li>Kontakt (Full)</li>
+						<li>Mercury 6</li>
+						<li>Massive & Massive X</li>
+						<li>SWAM Solo Strings 3</li>
+					</div>
+                    <br>
+					<h4>Guitar/Bass Virtual Amps</h4>
+					<div class="gear-grid">
+						<li>Neural DSP (Plini, Petrucci, Rabea)</li>
+						<li>Bogren Digital (Bassknob STD, 5169 Ampknob)</li>
+						<li>Brainworx Ampeg SVT-VR</li>
+						<li>Native Instruments Guitar Rig 5</li>
+						<li>Scuffham Amps S-Gear 3</li>
+						<li>Softube Marshall Plexi</li>
+						<li>Two Notes Genome & Wall Of Sound</li>
+						<li>Waves Gtr</li>
+					</div>
+                    <br>
+					<h4>Drum Production</h4>
+					<div class="gear-grid">
+						<li>Bogren Digital Krimh Drums</li>
+						<li>Samples From Mars complete collection</li>
+						<li>Steven Slate Trigger 2</li>
+						<li>ToonTrack Superior Drummer 3</li>
+					</div>	
+                    <br>
+					<h4>Vocal Tools</h4>
+					<div class="gear-grid">
+						<li>Synchro Arts VocAlign 6</li>
+						<li>Universal Audio plugins (1176, LA2A, etc)</li>
+						<li>iZotope VocalSynth</li>
+					</div>
+
+					<p><em>And more!</em></p>
+				</div>
+			</div>
+
+		</div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('active');
+    }
+  </script>
+    <script src="gallery.js"></script>
+	<script src="tracks.js"></script>
+	<script src="script.js"></script>
+
+</body>
+</html>
