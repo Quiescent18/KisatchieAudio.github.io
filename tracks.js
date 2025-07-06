@@ -1,11 +1,11 @@
 const tracks = [
   {
-    title: "Gloryhammer - Wasteland Warrior Hoots Patrol",
-    file: "audio/HOOTS.mp3",
-    artwork: "img/portfolio/GH_WWHP.webp",
-    credits: ["Saxophone"],
-    genres: ["Rock", "Power Metal"],
-    //disclaimer: "Not the official mix.\nCourtesy of XYZ Academy."
+    title: "Bright Fires - Paragraphs & Parallels",
+    file: "audio/BRIGHT FIRES - PARAGRAPHS & PARALLELS FINAL (MP3).mp3",
+    artwork: "img/portfolio/Para cover.jpeg",
+    credits: ["Mixing", "Mastering", "Production"],
+    genres: ["Rock", "Emo"],
+    
   },
   {
     title: "Suite Clarity - Led To Disgrace",
@@ -13,6 +13,7 @@ const tracks = [
     artwork: "img/portfolio/convergence.webp",
     credits: ["Keyboards"],
     genres: ["Progressive Rock"]
+    //disclaimer: "Not the official mix.\nCourtesy of XYZ Academy."
   },
   {
     title: "Last II - Black Hole",
