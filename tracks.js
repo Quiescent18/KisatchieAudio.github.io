@@ -4,8 +4,7 @@ const tracks = [
     file: "audio/BRIGHT FIRES - PARAGRAPHS & PARALLELS FINAL (MP3).mp3",
     artwork: "img/portfolio/Para cover.jpeg",
     credits: ["Mixing", "Mastering", "Production"],
-    genres: ["Rock", "Emo"],
-    
+    genres: ["Rock", "Emo"]
   },
   {
     title: "Suite Clarity - Led To Disgrace",
