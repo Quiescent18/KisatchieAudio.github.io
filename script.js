@@ -1,5 +1,5 @@
-//const roles = ["Mixing", "Mastering", "Producing", "Writing", "Session Keys", "Saxophone"];
-//const genres = ["Pop", "Rock", "Electronic", "Jazz", "Funk"];
+//const roles = ["Mixing", "Mastering", "Production"];
+//const genres = ["Pop", "Rock", "Metal", "Country", "Emo"];
 
 // Generate roles and genres dynamically
 const roles = new Set();
