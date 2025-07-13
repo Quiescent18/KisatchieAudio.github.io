@@ -7,11 +7,11 @@ const tracks = [
     genres: ["Rock", "Emo"]
   },
   {
-    title: "Suite Clarity - Led To Disgrace",
-    file: "audio/SuiteClarity.m4a",
-    artwork: "img/portfolio/convergence.webp",
-    credits: ["Keyboards"],
-    genres: ["Progressive Rock"]
+    title: "Bright Fires - A Way With Words",
+    file: "audio/bright fires - a way with words M10.mp3",
+    artwork: "img/portfolio/a way.jpg",
+    credits: ["Mixing", "Mastering", "Production"],
+    genres: ["Rock", "Emo"]
     //disclaimer: "Not the official mix.\nCourtesy of XYZ Academy."
   },
   {
