@@ -106,18 +106,4 @@ const tracks = [
     credits: ["Mixing", "Mastering"],
     genres: ["Indie"]
   },
-  {
-    title: "Mortrem - Nonfiction",
-    file: "audio/nonfiction.mp3",
-    artwork: "img/portfolio/Mortrem.webp",
-    credits: ["Mixing", "Mastering"],
-    genres: ["Rock"]
-      },  
-  {
-    title: "McVittie - Ionosphere",
-    file: "audio/ionosphere.mp3",
-    artwork: "img/portfolio/voltage.webp",
-    credits: ["Mixing", "Mastering"],
-    genres: ["Rock"]
-  },
-];
+  ];
