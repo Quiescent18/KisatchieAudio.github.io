@@ -83,7 +83,7 @@ const tracks = [
     file: "audio/demo division - control.mp3",
     artwork: "img/portfolio/demo dev.png",
     credits: ["Mixing", "Mastering"],
-    genres: ["Metal"]
+    genres: ["Rock"]
   },
   {
     title: "Crossley Hunter - Dilatory",
