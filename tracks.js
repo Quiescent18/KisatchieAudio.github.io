@@ -54,14 +54,14 @@ const tracks = [
     file: "audio/trees on mars- first place.mp3",
     artwork: "img/portfolio/trees.png",
     credits: ["Mixing", "Mastering"],
-    genres: ["Rock, Instrumental"]
+    genres: ["Rock", "Instrumental"]
   },
   {
     title: "Drew Elliott - Conversations",
     file: "audio/drew elliott - conversations.mp3",
     artwork: "img/portfolio/drew.png",
     credits: ["Mixing", "Mastering"],
-    genres: ["Alternative", "Indie"]
+    genres: ["Alternative", "Indie", "Pop Rock"]
   },
   {
     title: "Signifier - Single",
