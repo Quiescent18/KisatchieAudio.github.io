@@ -62,6 +62,13 @@ const tracks = [
     artwork: "img/portfolio/drew.png",
     credits: ["Mixing", "Mastering"],
     genres: ["Alternative", "Indie", "Pop Rock"]
+    },  
+  {
+    title: "Lilyhammer - For You",
+    file: "audio/lilyhammer - for you (master).mp3",
+    artwork: "img/portfolio/lily.jpg",
+    credits: ["Mastering"],
+    genres: ["Rock"]
   },
   {
     title: "Signifier - Single",
