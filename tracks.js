@@ -74,36 +74,50 @@ const tracks = [
   {
     title: "Burst and Bloom - Liar",
     file: "audio/burst and bloom - liar.mp3",
-    artwork: "img/portfolio/birdseye.webp",
+    artwork: "img/portfolio/liar.png",
     credits: ["Mixing", "Mastering"],
     genres: ["Rock"]
   },
   {
-    title: "Spectra - Lost At Sea",
-    file: "audio/LostAtSea.mp3",
-    artwork: "img/portfolio/pwodo.webp",
-    credits: ["Keyboards", "Saxophone", "Writing", "Produced", "Mastering", "Mixing", "Engineering"],
-    genres: ["Progressive Rock"]
+    title: "Demo Division - Control",
+    file: "audio/demo division - control.mp3",
+    artwork: "img/portfolio/demo dev.png",
+    credits: ["Mixing", "Mastering"],
+    genres: ["Metal"]
   },
   {
-    title: "McVittie - The Final Kill",
-    file: "audio/FinalKill_Sax.mp3",
-    artwork: "img/portfolio/lonekiller.webp",
-    credits: ["Keyboards", "Saxophone", "Produced", "Mixing", "Mastering", "Writing", "Engineering"],
-    genres: ["Electronic", "Synthwave"]
+    title: "Crossley Hunter - Dilatory",
+    file: "audio/crossley hunter - dialatory 2022 mix.mp3",
+    artwork: "img/portfolio/dilatory.png",
+    credits: ["Mixing", "Mastering"],
+    genres: ["Rock"]
   },  
+  {
+    title: "The Bright Star Alliance - Error 404",
+    file: "audio/the bright star alliance - error 404.mp3",
+    artwork: "img/portfolio/bright star.png",
+    credits: ["Mixing", "Mastering"],
+    genres: ["Metal"]
+  },  
+  {
+    title: "The Western Den - Like You Do (live)",
+    file: "audio/the western den - like you do.mp3",
+    artwork: "img/portfolio/western.png",
+    credits: ["Mixing", "Mastering"],
+    genres: ["Indie"]
+  },
   {
     title: "Mortrem - Nonfiction",
     file: "audio/nonfiction.mp3",
     artwork: "img/portfolio/Mortrem.webp",
-    credits: ["Keyboards"],
-    genres: ["Progressive Rock"]
-  },  
+    credits: ["Mixing", "Mastering"],
+    genres: ["Rock"]
+      },  
   {
     title: "McVittie - Ionosphere",
     file: "audio/ionosphere.mp3",
     artwork: "img/portfolio/voltage.webp",
-    credits: ["Keyboards", "Produced", "Mixing", "Mastering", "Writing", "Engineering"],
-    genres: ["Electronic", "Synthwave"]
+    credits: ["Mixing", "Mastering"],
+    genres: ["Rock"]
   },
 ];
