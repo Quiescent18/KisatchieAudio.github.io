@@ -281,7 +281,7 @@ main, #app {
  50% { background-image: url('img/intro/rack.jpeg'); }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 550px) {
   .intro {
     flex-direction: column;
     align-items: center;
