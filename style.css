@@ -277,8 +277,8 @@ main, #app {
 .content h1 { margin-bottom: 1rem; }
 
 @keyframes fade {
-  0% { background-image: url('img/intro/faderport.webp'); }
-  100% { background-image: url('img/intro/faderport.webp'); }
+  0% { background-image: url('img/intro/rack.jpeg'); }
+  100% { background-image: url('img/intro/rack.jpeg'); }
 }
 
 @media (max-width: 768px) {
