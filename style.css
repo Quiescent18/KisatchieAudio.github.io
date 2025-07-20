@@ -278,7 +278,7 @@ main, #app {
 
 @keyframes fade {
   0% { background-image: url('img/intro/rack.jpeg'); }
-  100% { background-image: url('img/intro/rack.jpeg'); }
+ 50% { background-image: url('img/intro/rack.jpeg'); }
 }
 
 @media (max-width: 768px) {
