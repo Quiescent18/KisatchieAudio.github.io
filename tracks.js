@@ -1,5 +1,12 @@
 const tracks = [
   {
+    title: "Bright Fires - Entropy",
+    file: "audio/bright fires - entropy  FINAL EDIT3.mp3",
+    artwork: "img/portfolio/entropy cover.png",
+    credits: ["Mixing", "Mastering", "Production", "Recording"],
+    genres: ["Rock", "Emo"]
+  },
+  {
     title: "Bright Fires - Paragraphs & Parallels",
     file: "audio/BRIGHT FIRES - PARAGRAPHS & PARALLELS FINAL (MP3).mp3",
     artwork: "img/portfolio/Para cover.jpeg",
