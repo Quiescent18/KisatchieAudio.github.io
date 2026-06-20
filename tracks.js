@@ -1,5 +1,12 @@
 const tracks = [
   {
+    title: "Ashford - Perennial",
+    file: "audio/ashford - perennial.mp3",
+    artwork: "img/portfolio/ashford perennial.jpg",
+    credits: ["Mixing", "Mastering"],
+    genres: ["Post Grunge","Shoegaze"]
+  },
+  {
     title: "Bright Fires - Entropy",
     file: "audio/bright fires - entropy  FINAL EDIT3.mp3",
     artwork: "img/portfolio/entropy cover.png",
@@ -19,8 +26,7 @@ const tracks = [
     artwork: "img/portfolio/a way.jpg",
     credits: ["Mixing", "Mastering", "Production", "Recording"],
     genres: ["Rock", "Emo"]
-    //disclaimer: "Not the official mix.\nCourtesy of XYZ Academy."
-  },
+   },
   {
     title: "Bright Fires - Shadows",
     file: "audio/bright fires - shadows final 7.mp3",
