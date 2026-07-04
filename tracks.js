@@ -1,4 +1,11 @@
 const tracks = [
+   {
+    title: "Bright Fires - Daybreak",
+    file: "audio/bright fires - daybreak final mp3.mp3",
+    artwork: "img/portfolio/bf daybreak cover.JPG",
+    credits: ["Mixing", "Mastering", "Production", "Recording"],
+    genres: ["Rock", "Emo"]
+  },
   {
     title: "Ashford - Perennial",
     file: "audio/ashford - perennial.mp3",
