@@ -16,28 +16,29 @@ main, #app {
 }
 .site-header {
     width: 100%;
-    background: transparent;       /* or transparent if you prefer */
+    background: #121212;      /* Match your page background */
     text-align: center;
     padding: 20px 0;
+    position: relative;
+    z-index: 1000;
 }
 
-.logo {
-    width: 300px;              /* Desktop size */
-    max-width: 80%;
+.site-logo {
+    width: 280px;             /* Desktop size */
+    max-width: 90%;
     height: auto;
     display: block;
     margin: 0 auto;
 }
+
 @media (max-width: 768px) {
-    .logo {
-        width: 220px;
+    .site-logo {
+        width: 180px;
     }
 
     .site-header {
         padding: 15px 0;
     }
-}
-
 h1 {
   text-align: center;
   margin-bottom: 2rem;
