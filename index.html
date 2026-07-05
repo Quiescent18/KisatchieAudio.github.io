@@ -3,257 +3,177 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Kisatchie Audio</title>
-
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="font-awesome.min.css" />
-  <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="font-awesome.min.css"/>
+  <link rel ="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MusicRecordingStudio",
-    "name": "Kisatchie Audio",
-    "url": "https://kisatchieaudio.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Houston",
-      "addressRegion": "TX",
-      "addressCountry": "US"
-    },
-    "founder": {
-      "@type": "Person",
-      "name": "Joel Davis"
-    },
-    "sameAs": [
-      "https://instagram.com/kisatchieaudio",
-      "https://facebook.com/kisatchieaudio"
-    ]
-  }
+<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": "MusicRecordingStudio",
+	  "name": "Kisatchie Audio",
+	  "url": "https://kisatchieaudio.com",
+	  "address": {
+		"@type": "PostalAddress",
+		"addressLocality": "Houston",
+		"addressRegion": "TX",
+		"addressCountry": "US"
+	  },
+	  "founder": {
+		"@type": "Person",
+		"name": "Joel Davis"
+	  },
+	  "sameAs": [
+		"https://instagram.com/kisatchieaudio",
+		"https://facebook.com/kisatchieaudio"
+	  ]
+	}
   </script>
 
+	
   <style>
+ 
   </style>
-
 </head>
-
 <body>
-
-  <div class="logo">
-    <img src="img/intro/logo.webp" alt="Kisatchie Audio logo">
-  </div>
-
-  </header>
+   <div class="logo"><img src="img/intro/logo.webp" alt="Kisatchie Audio logo"></img></div>
+      </header>
 
   <section id="about" class="intro">
-
+   
     <div class="carousel"></div>
 
+    
     <div class="content">
-
-      <h1>
-        <p style="font-style: italic; margin-bottom: 1rem;">
-          Joel Davis
-        </p>
-
-        <p>Kisatchie Audio - Houston, Texas</p>
+		<h1>
+        <p style="font-style: italic; margin-bottom: 1rem;">Joel Davis 
+		</p>
+			
+			<p>Kisatchie Audio - Houston, Texas</p>
       </h1>
-
-      <br>
-
-      <h1>About Me</h1>
-
+		<br>
+        <h1>About Me</h1>
       <p>
-        Hey there! Thanks for stopping by. I've been a musician for most of my life, and that passion naturally led me down the path of audio engineering/production. What started as a personal mission to make better sounding demos for my own projects, quickly turned into something more. As my skills grew, fellow musicians began reaching out for help with their own recordings.
+        Hey there! Thanks for stopping by. I've been a musician for most of my life, and that passion naturally led me down the path of audio engineering/production. What started as a personal mission to make better sounding demos for my own projects, quickly turned into something more. As my skills grew, fellow musicians began reaching out for help with their own recordings. 
       </p>
-
       <br>
-
       <p>
-        I offer professional recording, mixing, and mastering services tailored to artists who care about capturing the emotion, energy, and clarity their music deserves.
-      </p>
-
+       I offer professional recording, mixing, and mastering services tailored to artists who care about capturing the emotion, energy, and clarity their music deserves. 
       <br>
-
       <p>
-        Every artist is unique. Why sound like everyone else?
+	      <br>
+      <p>
+Every artist is unique. Why sound like everyone else?
+	<br>
+      <p>  
+	      <br>
+      <p>
+       Whether you're looking to polish a single, shape the sonic identity of an EP, or bring cohesion to a full-length album, I'm here to help make your sound everything it can be. I offer a hybrid setup that utilizes outboard gear to combat the digital sterility that often plagues home recordings.
       </p>
-
       <br>
-
       <p>
-        Whether you're looking to polish a single, shape the sonic identity of an EP, or bring cohesion to a full-length album, I'm here to help make your sound everything it can be. I offer a hybrid setup that utilizes outboard gear to combat the digital sterility that often plagues home recordings.
+        Keep scrolling to hear some samples of my work and feel free to reach out if you'd like to work together. 
       </p>
-
-      <br>
-
-      <p>
-        Keep scrolling to hear some samples of my work and feel free to reach out if you'd like to work together.
-      </p>
-
     </div>
 
-    <img src="img/intro/headshot.webp" alt="Joel Davis" />
+     <img src="img/intro/headshot.webp" alt="Joel Davis" />
+	  
 
+    
   </section>
 
   <section id="portfolio">
-
     <h1>My Music Portfolio</h1>
-
     <h2>Filter by Credit</h2>
     <div class="filter-buttons" id="filter-buttons"></div>
 
     <h2>Filter by Genre</h2>
     <div class="filter-buttons" id="genre-buttons"></div>
 
-    <div class="filter-buttons" id="clear-filters-wrapper" style="text-align:center; margin-top:1rem; display:none;">
-      <button id="clear-filters">
-        Clear Filters
-      </button>
-    </div>
+	<div class="filter-buttons" id="clear-filters-wrapper" style="text-align: center; margin-top: 1rem; display: none;">
+		<button id="clear-filters">
+		  Clear Filters
+		</button>
+	  </div>
 
     <h3>Click on any of the tracks below to listen!</h3>
 
     <div class="track-nav-wrapper">
+		<button class="scroll-btn left" onclick="scrollTracks(-1)">←</button>
 
-      <button class="scroll-btn left" onclick="scrollTracks(-1)">
-        ←
-      </button>
+		<div id="track-list" class="track-grid"></div>
 
-      <div id="track-list" class="track-grid"></div>
+		<button class="scroll-btn right" onclick="scrollTracks(1)">→</button>
+	</div>
 
-      <button class="scroll-btn right" onclick="scrollTracks(1)">
-        →
-      </button>
-
-    </div>
-
-    <audio
-      id="player"
-      controls
-      style="width:100%; margin-top:30px;"
-      controlsList="nodownload">
-    </audio>
-
+    <audio id="player" controls style="width: 100%; margin-top: 30px;" controlsList="nodownload"></audio>
   </section>
 
   <section id="contact">
+    <!-- Your contact form code here -->
+     <div class="section-title">
+				<h2>RATES</h2>	
+                <p>ONLINE MIXING/MASTERING: $150 PER TRACK, $500 FOR 5 SONG EP</p>
+	      <br>
+      <p>CONTACT FOR QUOTES REGARDING PRODUCTION, RECORDING, EDITING, AND FULL LENGTH ALBUMS -AS EACH PROJECT IS DIFFERENT & REQUIRES DIFFERENT LEVELS OF WORK</p>
+				
+			</div>
+			<form class="contact-form" action="https://formspree.io/f/xjkobrbp" method="POST">
+  <input type="text" name="_gotcha" style="display:none">
 
-    <div class="section-title">
-
-      <h2>RATES</h2>
-
-      <p>
-        ONLINE MIXING/MASTERING: $150 PER TRACK, $500 FOR 5 SONG EP
-      </p>
-
-      <br>
-
-      <p>
-        CONTACT FOR QUOTES REGARDING PRODUCTION, RECORDING, EDITING, AND FULL LENGTH ALBUMS -AS EACH PROJECT IS DIFFERENT & REQUIRES DIFFERENT LEVELS OF WORK
-      </p>
-
+  <div class="row">
+    <div class="col-lg-4">
+      <input type="text" placeholder="Your Name" name="name" required>
+    </div>
+    <div class="col-lg-4">
+      <input type="email" placeholder="Your E-mail" name="_replyto" required>
+    </div>
+    <div class="col-lg-4">
+      <input type="text" placeholder="Subject" name="subject" required>
+    </div>
+    <div class="col-lg-12">
+      <textarea placeholder="Message" name="msg" required></textarea>
     </div>
 
-    <form class="contact-form" action="https://formspree.io/f/xjkobrbp" method="POST">
-
-      <input type="text" name="_gotcha" style="display:none">
-
-      <div class="row">
-
-        <div class="col-lg-4">
-          <input type="text" placeholder="Your Name" name="name" required>
-        </div>
-
-        <div class="col-lg-4">
-          <input type="email" placeholder="Your E-mail" name="_replyto" required>
-        </div>
-
-        <div class="col-lg-4">
-          <input type="text" placeholder="Subject" name="subject" required>
-        </div>
-
-        <div class="col-lg-12">
-          <textarea placeholder="Message" name="msg" required></textarea>
-        </div>
-
-        <div class="text-center">
-          <button type="submit" class="site-btn">
-            SEND MESSAGE
-          </button>
-        </div>
-
-      </div>
-
-    </form>
-
-    <div class="ft-contact-widget">
-
-      <p>
-        <a href="https://instagram.com/kisatchieaudio">
-          <i class="fa-brands fa-instagram"></i>
-          @kisatchieaudio
-        </a>
-      </p>
-
-      <p>
-        <a href="https://facebook.com/kisatchieaudio">
-          <i class="fa-brands fa-facebook"></i>
-          @kisatchieaudio
-        </a>
-      </p>
-
-      <p>
-        <a href="mailto:joel@kisatchieaudio.com">
-          <i class="fa fa-envelope"></i>
-          joel@kisatchieaudio.com
-        </a>
-      </p>
-
+    <div class="text-center">
+      <button type="submit" class="site-btn">SEND MESSAGE</button>
     </div>
-
-  </section>
-
-  <!-- Curator Feed -->
-
-  <div id="curator-feed-default-feed-layout">
-    <a href="https://curator.io" target="_blank" class="crt-logo crt-tag">
-      Powered by Curator.io
-    </a>
   </div>
-
-  <script type="text/javascript">
-    (function () {
-      var i,
-          e,
-          d = document,
-          s = "script";
-
-      i = d.createElement("script");
-      i.async = 1;
-      i.charset = "UTF-8";
-      i.src = "https://cdn.curator.io/published/60d555d9-02d1-472f-b840-cd3ad2238b25.js";
-
-      e = d.getElementsByTagName(s)[0];
-      e.parentNode.insertBefore(i, e);
-    })();
-  </script>
-
+</form>
+            <div class="ft-contact-widget">
+            <p><a href="https://instagram.com/kisatchieaudio"><i class="fa-brands fa-instagram"> </i> @kisatchieaudio</a></p>
+							<p><a href="https://facebook.com/kisatchieaudio"><i class="fa-brands fa-facebook"></i> @kisatchieaudio</a></p>
+							<p><a href="mailto:joel@kisatchieaudio.com"><i class="fa fa-envelope"></i> joel@kisatchieaudio.com</a></p>
+							
+            </div>
   </section>
 
-  <script>
+	<!-- Place <div> tag where you want the feed to appear -->
+<div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
+
+<!-- The Javascript can be moved to the end of the html page before the </body> tag -->
+<script type="text/javascript">
+/* curator-feed-default-feed-layout */
+(function(){
+var i,e,d=document,s="script";i=d.createElement("script");i.async=1;i.charset="UTF-8";
+i.src="https://cdn.curator.io/published/60d555d9-02d1-472f-b840-cd3ad2238b25.js";
+e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+})();
+</script>
+		</section>
+
+
+   <script>
     function toggleMenu() {
-      const nav = document.getElementById("navbar");
-      nav.classList.toggle("active");
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('active');
     }
   </script>
-
-  <script src="gallery.js"></script>
-  <script src="tracks.js"></script>
-  <script src="script.js"></script>
+    <script src="gallery.js"></script>
+	<script src="tracks.js"></script>
+	<script src="script.js"></script>
 
 </body>
 </html>
