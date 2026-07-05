@@ -14,6 +14,29 @@ main, #app {
   flex-direction: column;
   align-items: center;
 }
+.site-header {
+    width: 100%;
+    background: transparent;       /* or transparent if you prefer */
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 300px;              /* Desktop size */
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .logo {
+        width: 220px;
+    }
+
+    .site-header {
+        padding: 15px 0;
+    }
+}
 
 h1 {
   text-align: center;
