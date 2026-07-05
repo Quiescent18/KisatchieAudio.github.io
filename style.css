@@ -244,7 +244,9 @@ main, #app {
       top: 0; left: 0;
       width: 100%; height: 100%;
       z-index: 0;
-      animation: fade 60s infinite;
+      
+    background-image: url("img/intro/faderport.webp");
+
       background-size: cover;
       background-position: center;
       filter: brightness(0.4) blur(4px);
