@@ -592,3 +592,9 @@ a:active {
 .lightbox-nav.next {
   right: 1rem;
 }
+/* Top-left Kisatchie Audio logo */
+.logo img {
+  width: 72px;
+  height: auto;
+  display: block;
+}
