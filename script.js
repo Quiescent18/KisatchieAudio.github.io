@@ -12,6 +12,121 @@ const genreButtonsEl = document.getElementById('genre-buttons');
 const clearWrapper = document.getElementById('clear-filters-wrapper');
 const player = document.getElementById('player');
 
+// Antarctic-style phone playlist: create its container without changing index.html.
+// Styling is deliberately scoped to the portfolio and the <=768px breakpoint.
+(function installMobilePlaylist() {
+  if (!trackListEl) return;
+  const portfolio = trackListEl.closest('#portfolio');
+  const desktopWrapper = trackListEl.closest('.track-nav-wrapper');
+  if (!portfolio || !desktopWrapper) return;
+
+  let mobileList = document.getElementById('mobile-track-list');
+  if (!mobileList) {
+    mobileList = document.createElement('div');
+    mobileList.id = 'mobile-track-list';
+    mobileList.setAttribute('aria-label', 'Music portfolio playlist');
+    desktopWrapper.insertAdjacentElement('beforebegin', mobileList);
+  }
+
+  if (!document.getElementById('kisatchie-mobile-playlist-styles')) {
+    const style = document.createElement('style');
+    style.id = 'kisatchie-mobile-playlist-styles';
+    style.textContent = `
+      /* Antarctic Studios-style mobile portfolio. Desktop remains unchanged. */
+      #portfolio #mobile-track-list { display: none; }
+      @media (max-width: 768px) {
+        #portfolio .track-nav-wrapper,
+        #portfolio #track-list { display: none !important; }
+        #portfolio #mobile-track-list {
+          display: block;
+          max-height: 360px;
+          overflow-y: auto;
+          overflow-x: hidden;
+          overscroll-behavior: contain;
+          margin-top: 15px;
+          border: 1px solid #ccc;
+          border-radius: 12px;
+          background: #000;
+          -webkit-overflow-scrolling: touch;
+        }
+        #portfolio .mobile-track-row {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 12px;
+          min-height: 90px;
+          border-bottom: 1px solid #ddd;
+          cursor: pointer;
+          color: #fff;
+          box-sizing: border-box;
+          transition: background-color 0.15s ease;
+          -webkit-tap-highlight-color: transparent;
+        }
+        #portfolio .mobile-track-row:last-child { border-bottom: 0; }
+        #portfolio .mobile-track-row:focus-visible {
+          outline: 2px solid #ccffff;
+          outline-offset: -3px;
+        }
+        #portfolio .mobile-track-art {
+          width: 22vw;
+          max-width: 90px;
+          height: auto;
+          aspect-ratio: 1 / 1;
+          border-radius: 8px;
+          object-fit: cover;
+          flex: 0 0 auto;
+        }
+        #portfolio .mobile-track-text {
+          display: flex;
+          flex: 1 1 auto;
+          min-width: 0;
+          flex-direction: column;
+        }
+        #portfolio .mobile-track-title {
+          font-weight: 700;
+          font-size: 1.05rem;
+          line-height: 1.2;
+          margin-bottom: 3px;
+          overflow-wrap: anywhere;
+        }
+        #portfolio .mobile-track-artist {
+          font-size: 0.85rem;
+          line-height: 1.3;
+          opacity: 0.7;
+        }
+        #portfolio .mobile-track-indicator {
+          flex: 0 0 30px;
+          width: 30px;
+          font-size: 1.2rem;
+          text-align: center;
+          opacity: 0.65;
+        }
+        #portfolio .mobile-track-row.playing { background: #171a1a; }
+        #portfolio .mobile-track-row.playing .mobile-track-indicator {
+          color: #ccffff;
+          opacity: 1;
+        }
+        #portfolio .mobile-track-disclaimer {
+          color: #f08080;
+          font-size: 0.75rem;
+          line-height: 1.1rem;
+          margin-top: 4px;
+          font-weight: 600;
+        }
+        #portfolio audio {
+          display: block;
+          width: 100%;
+          max-width: 100%;
+          border-radius: 10px;
+          box-sizing: border-box;
+          accent-color: #ccffff;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+})();
+
 // The existing Kisatchie index.html has broad-filter rows, but no sub-filter rows.
 // Create only the two missing rows; no HTML edits are required.
 function getOrCreateSubFilters(parent, id) {
@@ -151,7 +266,14 @@ function loadFiltersFromURL() {
 
 function updatePlayingHighlights() {
   document.querySelectorAll('.track, .mobile-track-row').forEach(element => {
-    element.classList.toggle('playing', element.dataset.file === currentPlayingFile);
+    const selected = element.dataset.file === currentPlayingFile;
+    const isPlaying = selected && player && !player.paused;
+    element.classList.toggle('playing', selected);
+    if (element.classList.contains('mobile-track-row')) {
+      element.setAttribute('aria-pressed', String(Boolean(isPlaying)));
+      const indicator = element.querySelector('.mobile-track-indicator i');
+      if (indicator) indicator.className = isPlaying ? 'fas fa-pause' : 'fas fa-play';
+    }
   });
 }
 
@@ -222,7 +344,16 @@ function renderTracks() {
           ${track.disclaimer ? `<div class="mobile-track-disclaimer">${track.disclaimer}</div>` : ''}
         </div>
         <div class="mobile-track-indicator"><i class="fas fa-play"></i></div>`;
+      row.setAttribute('role', 'button');
+      row.setAttribute('tabindex', '0');
+      row.setAttribute('aria-label', `Play or pause ${track.title}`);
       row.onclick = () => toggleTrack(track);
+      row.onkeydown = event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          toggleTrack(track);
+        }
+      };
       mobileList.appendChild(row);
     });
   }
@@ -256,6 +387,7 @@ if (clearButton) {
 
 if (player) {
   player.addEventListener('play', updatePlayingHighlights);
+  player.addEventListener('pause', updatePlayingHighlights);
   player.addEventListener('ended', () => {
     if (!filteredTracks.length) return;
     const currentIndex = filteredTracks.findIndex(track => track.file === currentPlayingFile);
