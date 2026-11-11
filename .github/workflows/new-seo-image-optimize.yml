@@ -1,0 +1,38 @@
+name: Build new optimized SEO image copies
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/new-seo-image-optimize.yml"
+      - "new-seo/optimize_images.py"
+
+permissions:
+  contents: write
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install image optimization dependency
+        run: python -m pip install Pillow==11.3.0
+      - name: Generate new optimized copies and social preview
+        run: python new-seo/optimize_images.py
+      - name: Commit generated assets without altering originals
+        run: |
+          if [[ -n "$(git status --porcelain img/seo-optimized)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add img/seo-optimized
+            git commit -m "Add optimized image copies and branded social preview"
+            git push
+          else
+            echo "Optimized assets already up to date."
+          fi
