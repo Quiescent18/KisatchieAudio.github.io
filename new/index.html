@@ -111,42 +111,78 @@ html{scroll-padding-top:68px}.container{padding:0 22px}.nav-inner{height:68px}.b
 .audio-dock{padding:8px 11px max(8px,env(safe-area-inset-bottom))}.dock-content{grid-template-columns:minmax(0,1fr) auto;gap:6px 12px}.now-playing img{width:40px;height:40px}.now-playing-text strong{font-size:12px}.dock-controls{gap:3px}.dock-controls button{font-size:15px;padding:6px}.dock-controls .play{width:35px;height:35px;font-size:12px}.seek-group{grid-column:1/-1}.seek-group span{font-size:9px}footer{padding-bottom:110px}
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+/* NEW SITE REVISION — centered, full-bleed photo hero inspired by the supplied reference */
+.hero{display:flex;min-height:min(90vh,840px);align-items:center;justify-content:center;position:relative;isolation:isolate;text-align:center;background:#111;overflow:hidden}
+.hero-background{position:absolute;inset:-15px;z-index:-2;overflow:hidden}
+.hero-background img{width:100%;height:100%;object-fit:cover;object-position:center center;filter:blur(5px) brightness(.50) saturate(.66);transform:scale(1.065)}
+.hero:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(9,11,14,.34),rgba(9,11,14,.48) 60%,rgba(9,11,14,.72))}
+.hero-copy{width:100%;max-width:1180px;z-index:1;position:relative;background:none;padding:120px 30px 116px;margin:0}
+.hero h1{max-width:none;margin:0 auto 26px;text-transform:uppercase;font:800 clamp(60px,9.2vw,151px)/.94 var(--font-head);letter-spacing:-.095em;text-shadow:0 5px 30px rgba(0,0,0,.3)}
+.hero h1 span{color:var(--copper)}
+.hero-subtitle{margin:0 auto 30px;max-width:660px;color:#f1e8df;font-size:clamp(15px,1.45vw,19px);text-shadow:0 2px 10px #111}
+.hero .btn-row{justify-content:center}
+.about{background:#101011}
+.about .about-grid{grid-template-columns:minmax(270px,.78fr) minmax(0,1.22fr);gap:clamp(35px,6vw,85px);align-items:center}
+.about .about-copy p{font-size:15px;line-height:1.75;margin:14px 0;color:#d0c6bd}
+.about .about-copy strong{color:var(--copper)}
+.social{background:#151414;border-top:1px solid var(--line)}
+.social-links{display:flex;align-items:center;flex-wrap:wrap;gap:22px}
+.social-links a{font:700 12px var(--font-head);letter-spacing:.05em;text-transform:uppercase;border-bottom:1px solid var(--copper);padding-bottom:5px}
+.social-links a:hover{color:var(--copper)}
+.social #curator-feed-default-feed-layout{min-height:160px}
+.contact .contact-grid>div:first-child>.rate-box{margin-top:0}
+@media(max-width:760px){
+  .hero{min-height:77svh;display:flex;flex-direction:row;align-items:center}
+  .hero-background{inset:-14px}
+  .hero-background img{object-position:50% 50%;transform:scale(1.09);filter:blur(4px) brightness(.45) saturate(.7)}
+  .hero-copy{padding:90px 20px}
+  .hero h1{font-size:clamp(48px,12.4vw,84px);line-height:1;letter-spacing:-.08em}
+  .hero-subtitle{max-width:370px;font-size:14px}
+  .hero .btn-row{gap:10px}
+  .about .about-grid{grid-template-columns:1fr;gap:36px}
+  .about-photo{max-width:400px;margin:auto}
+  .about .about-copy p{font-size:14px}
+  .social-links{margin-top:18px}
+}
+
 </style>
 </head>
 <body>
 <header>
   <div class="container nav-inner">
-    <a class="brand" href="#top" aria-label="Kisatchie Audio home"><img src="../img/intro/logo.webp" alt="Original Kisatchie Audio logo"><span><span class="brand-name">KISATCHIE AUDIO</span><span class="brand-label">Independent audio studio</span></span></a>
+    <a class="brand" href="#top" aria-label="Kisatchie Audio home"><img src="data:image/webp;base64,UklGRpwDAABXRUJQVlA4IJADAABQEwCdASpgAGAAPp1CnUuloyMlKBcaELATiWkDsALGr4U+P70E/s7UmJF+zeFe0p/k96LxvtouMDuOPQDvhI3fPT+ffO/+Wf372CP1iKHmaM+UABqO1Jl0AWaxcTMT0eQbaVGvpOeyQL6W+7DQC/aXvHpk41EN1xhTwK4mT874kSzOJ/50a6/wPRKmxOVqLyEqKRAxCcxEbpZXe2QiJ+cZpl3kAP74DYPCIAg4EwuG9jDPCWdXh7ZSikl9YFPbjryyELDVF+w4DPWqF0mFop6ReKmDp6taH3LqLOagbXNRT+eFcManA3LfpT4EqO1Yd+MJtGFimTClAL3I+3Y8mi4XFUkAlYWBaEcPjrYdRCK3mQQBUgdGg1yIpeuep8f0WwX3jjzXR3mdNwXKv8lpoF0lMb6dAQVu5m23dkhAphnZtjA6muu978BdlEY1ANpO3cvOVE4Bjrdkegsx2ZiAHztEZleewn+z2VAiRbRZsoXw54wZ+xn3BswP0sy+BEYS+yfRHaSxNRgteb4gmZOkt/iee91xPDHGhbj3bwCh7/5JTuEqqSO+DEpNrL8R5jHFhJUvVbJlGeyFTzxTQpEyHsja56iCile+I5OVh+s0M7w43ZfjN1pV9jiKPi1tJTKXMYl+95MnyOXv2ktxJCbjcBRovr+J2InPeW+HW06bf/4Hf/YQDmoxu1GV6I5tp4BzZm4v9/QPdrE5rQWH7MOvPLns/SEll+twhDDiGPV88U9gdCNyq/rD152GK5efGc8mxp2u8taC1Yj4gwcW3nnfoq9W2xqgoj16mkCm7WxS183P6Pq+181fIe7u4cXeLTmxioDY+8wDUNQq7m1lgm4UdmAqAPP20pD7rgPS/Z4T/xT5U7uKRNHJZGF+N5iRmB5mD0sUja3rG4Zeag5BqcjAvw9zvMRJ35lTHvkBOb6z0CKXq94wkxefG9JU6kNNHx83BSZLi8yfbcr+bK9mDQ/QD/mCA5iYwJDD85stluGyGyoR64L72a8hinxSRUtVoDjvuBnB3JRUeAEvXSy5/hxChGQK+CE5oVr6g57v3HseyQYxU2OBrEpU7pzkWsDSpoeZVmP9WMcZGhVhBzYmDCixW2lJCTA8arzH2gYeVXWyIug3paV/MQN0/sDNUhlFbW+OAowNa23VoNXjLd3D2JtG2j6wl5Vd3jkfZJm/HQQrtU9AwmePVq6ojA1D0OH9ByIAAAA=" alt="Kisatchie Audio circular soundwave logo"><span><span class="brand-name">KISATCHIE AUDIO</span><span class="brand-label">Houston, Texas</span></span></a>
     <button class="menu-button" id="menu-button" aria-expanded="false" aria-controls="main-nav">Menu ☰</button>
-    <nav class="main-nav" id="main-nav" aria-label="Site navigation"><a href="#services">Services</a><a href="#work">The work</a><a href="#about">About</a><a class="nav-contact" href="#contact">Start a project ↗</a></nav>
+    <nav class="main-nav" id="main-nav" aria-label="Site navigation"><a href="#about">About</a><a href="#work">The work</a><a href="#social">Social</a><a class="nav-contact" href="#contact">Start a project ↗</a></nav>
   </div>
 </header>
 <main id="top">
   <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-background" aria-hidden="true"><img src="../img/intro/faderport.webp" alt="" fetchpriority="high"></div>
     <div class="hero-copy">
-      <p class="eyebrow">Independent audio studio / Houston, Texas</p>
-      <h1 id="hero-title">Make it<br>sound<br><span>alive.</span></h1>
+      <h1 id="hero-title">Make it<br>sound <span>alive.</span></h1>
       <p class="hero-subtitle">Recording, mixing &amp; mastering for artists who care about every detail—and every feeling.</p>
       <div class="btn-row"><a class="btn btn-primary" href="#work">Listen to the work <span aria-hidden="true">↗</span></a><a class="btn btn-outline" href="#contact">Let's collaborate <span aria-hidden="true">↗</span></a></div>
-      <div class="hero-meta">A human touch. A hybrid approach.</div>
-    </div>
-    <div class="hero-image">
-      <img src="../img/intro/faderport1.webp" alt="Real analog outboard gear from Kisatchie Audio" fetchpriority="high">
-      <div class="hero-image-label">Real gear / real character</div>
     </div>
   </section>
-  <div class="ticker">Recording &nbsp; / &nbsp; Mixing &nbsp; / &nbsp; Mastering &nbsp; / &nbsp; Production &nbsp; / &nbsp; Houston, TX</div>
-  <section class="section services" id="services">
-    <div class="container">
-      <div class="section-header"><div><div class="eyebrow">01 / What I do</div><h2 class="section-title">The services.</h2></div><p class="section-description">Every song deserves an identity. A detailed, collaborative process—without losing what made the performance special.</p></div>
-      <div class="service-grid">
-        <article class="service-card"><div class="service-number">01 / MIX</div><h3>Mixing.</h3><p>Clarity, depth and impact—while preserving the energy and emotion of your music.</p></article>
-        <article class="service-card"><div class="service-number">02 / MASTER</div><h3>Mastering.</h3><p>A cohesive, release-ready finish that translates across speakers, headphones and systems.</p></article>
-        <article class="service-card"><div class="service-number">03 / CREATE</div><h3>Recording.</h3><p>Capture the performance with an intentional approach, great gear and room to experiment.</p></article>
+  <div class="ticker">Recording &nbsp; / &nbsp; Mixing &nbsp; / &nbsp; Mastering &nbsp; / &nbsp; Production</div>
+  <section class="section about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo"><img src="../img/intro/headshot.webp" alt="Joel Davis, Kisatchie Audio" loading="lazy"></div>
+      <div class="about-copy">
+        <div class="eyebrow">01 / Meet your engineer</div><h2 class="section-title">About me.</h2>
+        <p>Hey there! Thanks for stopping by. I've been a musician for most of my life, and that passion naturally led me down the path of audio engineering/production. What started as a personal mission to make better sounding demos for my own projects, quickly turned into something more. As my skills grew, fellow musicians began reaching out for help with their own recordings.</p>
+        <p>I offer professional recording, mixing, and mastering services tailored to artists who care about capturing the emotion, energy, and clarity their music deserves.</p>
+        <p><strong>Every artist is unique. Why sound like everyone else?</strong></p>
+        <p>Whether you're looking to polish a single, shape the sonic identity of an EP, or bring cohesion to a full-length album, I'm here to help make your sound everything it can be. I offer a hybrid setup that utilizes outboard gear to combat the digital sterility that often plagues home recordings.</p>
+        <p>Keep scrolling to hear some samples of my work and feel free to reach out if you'd like to work together.</p>
+        <div class="signature">Joel Davis <span> / Kisatchie Audio</span></div>
       </div>
     </div>
-  </section>
-  <section class="section portfolio" id="work">
+  </div>
+</section>
+<section class="section portfolio" id="work">
     <div class="container">
       <div class="section-header"><div><div class="eyebrow">02 / Turn it up</div><h2 class="section-title">Selected work.</h2></div><p class="section-description">No mockups. These are real artists, real songs and work from the existing Kisatchie Audio portfolio. Click a cover to listen.</p></div>
       <div class="filter-panel" role="group" aria-label="Filter portfolio">
@@ -166,31 +202,13 @@ html{scroll-padding-top:68px}.container{padding:0 22px}.nav-inner{height:68px}.b
       <p class="portfolio-foot">Showing <span id="track-count">0</span> songs · Click a track to play · All original audio and artwork sourced from the current site</p>
     </div>
   </section>
-  <section class="section about" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-photo"><img src="../img/intro/headshot.webp" alt="Joel Davis, owner of Kisatchie Audio" loading="lazy"></div>
-        <div class="about-copy">
-          <div class="eyebrow">03 / Behind the sound</div><h2 class="section-title">Music first.<br>Always.</h2>
-          <p>Hey, I'm Joel. I've been a musician for most of my life, and that passion led me into audio engineering and production.</p>
-          <p>What began as a mission to make better recordings for my own projects grew into helping other musicians bring their songs to life. Whether it's one single or a full-length album, I approach every project with the same care.</p>
-          <p><strong>Every artist is different. Why should everyone sound the same?</strong></p>
-          <p>I work with a hybrid digital and outboard setup to give each project the clarity, character and energy it needs.</p>
-          <div class="signature">Joel Davis <span> / Kisatchie Audio</span></div>
-        </div>
-      </div>
-      <div class="gear-strip" aria-label="Studio equipment photographs">
-        <img src="../img/intro/rackpic2.webp" alt="Kisatchie Audio analog rack and processors" loading="lazy">
-        <img src="../img/intro/faderport1.webp" alt="Kisatchie Audio analog processing gear and meters" loading="lazy">
-      </div>
-    </div>
-  </section>
+  
   <section class="section contact" id="contact">
     <div class="container">
-      <div class="section-header"><div><div class="eyebrow">04 / Start a project</div><h2 class="section-title">Let's make<br>something matter.</h2></div></div>
+      <div class="section-header"><div><div class="eyebrow">03 / Start a project</div><h2 class="section-title">Let's make<br>something matter.</h2></div></div>
       <div class="contact-grid">
         <div>
-          <p class="contact-copy">Tell me what you're working on, what it needs and where you want to take it. I'll help you find the right approach.</p>
+          
           <div class="rate-box">
             <h3>Current rates</h3><div class="rate-row"><span>Online mixing / mastering</span><b>$150 / track</b></div><div class="rate-row"><span>Five-song EP</span><b>$500</b></div>
             <p class="rate-note">Contact me for recording, production, editing and full-length album quotes. Each project is different.</p>
@@ -208,6 +226,21 @@ html{scroll-padding-top:68px}.container{padding:0 22px}.nav-inner{height:68px}.b
       </div>
     </div>
   </section>
+<section class="section social" id="social">
+  <div class="container">
+    <div class="section-header">
+      <div><div class="eyebrow">04 / Stay connected</div><h2 class="section-title">From the studio.</h2></div>
+      <div class="social-links">
+        <a href="https://instagram.com/kisatchieaudio" target="_blank" rel="noopener noreferrer" aria-label="Kisatchie Audio on Instagram">Instagram ↗</a>
+        <a href="https://facebook.com/kisatchieaudio" target="_blank" rel="noopener noreferrer" aria-label="Kisatchie Audio on Facebook">Facebook ↗</a>
+      </div>
+    </div>
+    <div id="curator-feed-default-feed-layout" aria-label="Kisatchie Audio social media photo feed"><a href="https://curator.io" target="_blank" rel="noopener noreferrer" class="crt-logo crt-tag">Powered by Curator.io</a></div>
+  </div>
+</section>
+<script>
+(function(){var d=document,s=d.createElement('script');s.async=true;s.charset='UTF-8';s.src='https://cdn.curator.io/published/60d555d9-02d1-472f-b840-cd3ad2238b25.js';var first=d.getElementsByTagName('script')[0];first.parentNode.insertBefore(s,first);})();
+</script>
 </main>
 <footer><div class="container footer-inner"><span>Kisatchie Audio — Houston, TX</span><span>Independent by design. Music first.</span><a href="#top">Back to top ↑</a></div></footer>
 <div class="audio-dock" aria-label="Portfolio audio player">
