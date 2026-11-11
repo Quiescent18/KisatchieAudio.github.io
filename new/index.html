@@ -271,7 +271,7 @@ html{scroll-padding-top:68px}.container{padding:0 22px}.nav-inner{height:68px}.b
             <h3>Current rates</h3><div class="rate-row"><span>Online mixing / mastering</span><b>$150 / track</b></div><div class="rate-row"><span>Five-song EP</span><b>$500</b></div>
             <p class="rate-note">Contact me for recording, production, editing and full-length album quotes. Each project is different.</p>
           </div>
-          <div class="contact-links"><a href="mailto:joel@kisatchieaudio.com">joel@kisatchieaudio.com</a><a href="https://instagram.com/kisatchieaudio" target="_blank" rel="noopener">Instagram ↗</a><a href="https://facebook.com/kisatchieaudio" target="_blank" rel="noopener">Facebook ↗</a></div>
+          <div class="contact-links"><a href="#contact" id="contact-email-link" aria-label="Email Kisatchie Audio">Email ↗</a><a href="https://instagram.com/kisatchieaudio" target="_blank" rel="noopener">Instagram ↗</a><a href="https://facebook.com/kisatchieaudio" target="_blank" rel="noopener">Facebook ↗</a></div>
         </div>
         <form class="contact-form" action="https://formspree.io/f/xjkobrbp" method="POST">
           <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
@@ -377,6 +377,12 @@ html{scroll-padding-top:68px}.container{padding:0 22px}.nav-inner{height:68px}.b
   document.getElementById('volume').addEventListener('input',e=>audio.volume=Number(e.target.value));audio.volume=.8;
   document.querySelectorAll('[data-credit]').forEach(b=>b.addEventListener('click',()=>{credit=b.dataset.credit;document.querySelectorAll('[data-credit]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));render();}));
   document.querySelectorAll('[data-genre]').forEach(b=>b.addEventListener('click',()=>{genre=b.dataset.genre;document.querySelectorAll('[data-genre]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));render();}));
+  // Assemble the contact address only when activated to avoid exposing a plain mailto in HTML.
+  document.getElementById('contact-email-link').addEventListener('click',event=>{
+    event.preventDefault();
+    const codes=[106,111,101,108,64,107,105,115,97,116,99,104,105,101,97,117,100,105,111,46,99,111,109];
+    window.location.href='mailto:'+String.fromCharCode(...codes);
+  });
   const menu=document.getElementById('menu-button'),nav=document.getElementById('main-nav');
   menu.addEventListener('click',()=>{const isOpen=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(isOpen));menu.textContent=isOpen?'Close ×':'Menu ☰';});
   nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu ☰';}));
