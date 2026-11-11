@@ -1,0 +1,170 @@
+[
+  {
+    "source": "img/intro/faderport.webp",
+    "optimized": "img/seo-optimized/hero.webp",
+    "width": 1800,
+    "height": 1350,
+    "original_bytes": 1867370,
+    "optimized_bytes": 134842
+  },
+  {
+    "source": "img/intro/headshot.webp",
+    "optimized": "img/seo-optimized/headshot.webp",
+    "width": 900,
+    "height": 826,
+    "original_bytes": 515088,
+    "optimized_bytes": 87182
+  },
+  {
+    "source": "img/portfolio/Para cover.jpeg",
+    "optimized": "img/seo-optimized/portfolio/Para cover.webp",
+    "width": 640,
+    "height": 640,
+    "original_bytes": 1343893,
+    "optimized_bytes": 67606
+  },
+  {
+    "source": "img/portfolio/a way.jpg",
+    "optimized": "img/seo-optimized/portfolio/a way.webp",
+    "width": 640,
+    "height": 640,
+    "original_bytes": 253915,
+    "optimized_bytes": 104510
+  },
+  {
+    "source": "img/portfolio/ash g.png",
+    "optimized": "img/seo-optimized/portfolio/ash g.webp",
+    "width": 640,
+    "height": 640,
+    "original_bytes": 2125011,
+    "optimized_bytes": 66468
+  },
+  {
+    "source": "img/portfolio/ashford perennial.jpg",
+    "optimized": "img/seo-optimized/portfolio/ashford perennial.webp",
+    "width": 637,
+    "height": 636,
+    "original_bytes": 182769,
+    "optimized_bytes": 88576
+  },
+  {
+    "source": "img/portfolio/bf daybreak cover.JPG",
+    "optimized": "img/seo-optimized/portfolio/bf daybreak cover.webp",
+    "width": 640,
+    "height": 640,
+    "original_bytes": 5557938,
+    "optimized_bytes": 49840
+  },
+  {
+    "source": "img/portfolio/bright fires - shadows cover.jpeg",
+    "optimized": "img/seo-optimized/portfolio/bright fires - shadows cover.webp",
+    "width": 640,
+    "height": 640,
+    "original_bytes": 748650,
+    "optimized_bytes": 57924
+  },
+  {
+    "source": "img/portfolio/bright star.png",
+    "optimized": "img/seo-optimized/portfolio/bright star.webp",
+    "width": 640,
+    "height": 640,
+    "original_bytes": 2307378,
+    "optimized_bytes": 83544
+  },
+  {
+    "source": "img/portfolio/cardinals.png",
+    "optimized": "img/seo-optimized/portfolio/cardinals.webp",
+    "width": 640,
+    "height": 640,
+    "original_bytes": 2693738,
+    "optimized_bytes": 141156
+  },
+  {
+    "source": "img/portfolio/dejavu.png",
+    "optimized": "img/seo-optimized/portfolio/dejavu.webp",
+    "width": 640,
+    "height": 640,
+    "original_bytes": 2622321,
+    "optimized_bytes": 135830
+  },
+  {
+    "source": "img/portfolio/demo dev.png",
+    "optimized": "img/seo-optimized/portfolio/demo dev.webp",
+    "width": 640,
+    "height": 640,
+    "original_bytes": 2495966,
+    "optimized_bytes": 114414
+  },
+  {
+    "source": "img/portfolio/dilatory.png",
+    "optimized": "img/seo-optimized/portfolio/dilatory.webp",
+    "width": 640,
+    "height": 640,
+    "original_bytes": 2053942,
+    "optimized_bytes": 52328
+  },
+  {
+    "source": "img/portfolio/drew.png",
+    "optimized": "img/seo-optimized/portfolio/drew.webp",
+    "width": 640,
+    "height": 640,
+    "original_bytes": 1578716,
+    "optimized_bytes": 43776
+  },
+  {
+    "source": "img/portfolio/entropy cover.png",
+    "optimized": "img/seo-optimized/portfolio/entropy cover.webp",
+    "width": 640,
+    "height": 640,
+    "original_bytes": 2640696,
+    "optimized_bytes": 97668
+  },
+  {
+    "source": "img/portfolio/liar.png",
+    "optimized": "img/seo-optimized/portfolio/liar.webp",
+    "width": 640,
+    "height": 640,
+    "original_bytes": 1886721,
+    "optimized_bytes": 32834
+  },
+  {
+    "source": "img/portfolio/lily.jpg",
+    "optimized": "img/seo-optimized/portfolio/lily.webp",
+    "width": 640,
+    "height": 640,
+    "original_bytes": 292513,
+    "optimized_bytes": 28502
+  },
+  {
+    "source": "img/portfolio/signifier.png",
+    "optimized": "img/seo-optimized/portfolio/signifier.webp",
+    "width": 640,
+    "height": 640,
+    "original_bytes": 2000239,
+    "optimized_bytes": 67828
+  },
+  {
+    "source": "img/portfolio/trees.png",
+    "optimized": "img/seo-optimized/portfolio/trees.webp",
+    "width": 640,
+    "height": 640,
+    "original_bytes": 2495424,
+    "optimized_bytes": 130106
+  },
+  {
+    "source": "img/portfolio/voila.png",
+    "optimized": "img/seo-optimized/portfolio/voila.webp",
+    "width": 640,
+    "height": 640,
+    "original_bytes": 2766498,
+    "optimized_bytes": 158190
+  },
+  {
+    "source": "img/portfolio/western.png",
+    "optimized": "img/seo-optimized/portfolio/western.webp",
+    "width": 640,
+    "height": 640,
+    "original_bytes": 1936526,
+    "optimized_bytes": 51212
+  }
+]
